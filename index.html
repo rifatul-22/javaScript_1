@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="textFull()">
+    <!-- onchange onmouseover onmouseout onkeydown onload  -->
+    <!-- javaScript event  -->
+    <h1 id="tnx">Hello</h1>
+    <button id="btn" onclick="changeName()">Submit</button> <br>
+
+    <input type="text" id="name" placeholder="Enter Your Name">
+    <button id="submit_alert" onclick="submit_alert()" >Alert</button> <br>
+     <!-- onchange event  -->
+     <p>Lorem ipsum dolor sit amet.</p>
+     <select id="select_car" onchange="changeCar()" >
+        <option value="Audi">Audi</option>
+        <option value="BMW">BMW</option>
+        <option value="Mercedws">Mercedes</option>
+        <option value="Volvo">Volvo</option>
+     </select>
+     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, natus.</p>
+     <p id="demo"></p>
+     <!-- onchange event  -->
+     <!-- onmouseover event  -->
+     <img id="big_img" src="img/smiley.gif" onmouseover="bigImg()" onmouseout="normalImg()" width="40px" height="40px">
+     <!-- onmouseover event  -->
+     <!-- onload event  -->
+      <p id="load">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam mollitia rerum explicabo, id corrupti</p>
+     <!-- onload event  -->
+
+     <input type="text" placeholder="Enter Your Name" id="keyUp" onkeyup="load()">
+     <h1 id="result"></h1>
+     <!-- javaScript event  -->
+      <!-- copy  -->
+      <p>Enter the Number: <input id="num">  <button onclick="fun()">Check</button></p>
+      <p id="resPara" style="display:none;">It is an <span id="res"></span> Number</p>
+      <!-- copy  -->
+
+
+    <script>
+        function changeName(){
+            document.getElementById('tnx').innerHTML = 'Iam Tanvir'
+            document.getElementById('btn').innerHTML = 'submitted'
+        }
+        function submit_alert(){
+            var userName = document.getElementById('name').value;
+            alert(userName);
+        }
+        function changeCar() {
+            var x = document.getElementById('select_car').value;
+            document.getElementById('demo').innerHTML = "You Select Brand: " + x;
+        }
+        function bigImg(){
+            document.getElementById('big_img').style.height = '60px'
+            document.getElementById('big_img').style.width = '60px'
+        }
+        function normalImg(){
+            document.getElementById('big_img').style.height = '40px'
+            document.getElementById('big_img').style.width = '40px'
+        }
+        function textLoad(){
+            alert('text is loaded');
+        }
+        function load(){
+            var user = document.getElementById('keyUp').value;
+            document.getElementById('result').innerHTML = 'Welcome '+ user;
+            if(user.length < 5){
+                document.getElementById('result').style.color = 'black';
+            }else if(user.length <= 5){
+                document.getElementById('result').style.color = 'red';
+            }else if(user.length >= 10){
+                document.getElementById('result').style.color = 'green';
+            }else{
+                document.getElementById('result').style.color = 'orange';
+            }
+        }
+        function textFull(){
+            alert('your Body is Full')
+        }
+       var studentName = 'Rifatul'
+       document.write(studentName);
+       document.write(studentName);
+       document.write(studentName);
+       document.write(studentName);
+       document.write(studentName);
+       //    copy 
+               var num, temp;
+              function fun()
+          {
+            num = parseInt(document.getElementById("num").value);
+            if(num)
+             {
+               temp = document.getElementById("resPara");
+                temp.style.display = "block";
+               if(num %2 ==0 )
+                document.getElementById("res").innerHTML = "Even";
+                else
+                  document.getElementById("res").innerHTML = "Odd";
+                }
+           }
+    // copy 
+     </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+#tnx{
+    padding: 15px;
+    letter-spacing: 1.2px;
+}
+#btn,
+#submit_alert{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    background: brown;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+input{
+    padding: 10px;
+    margin-left: 15px;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #333;
+    border-right: 3px solid #333;
+    margin-bottom: 15px;
+}
+p{
+    padding: 20px 15px;
+}
+#select_car{
+    margin-left: 15px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background: brown;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+#big_img{
+    margin-left: 15px;
+}
